@@ -15,7 +15,6 @@ Pada  server pembeli, menggunakan 1 thread yang berfungsi menerima inputan dari 
 - CLIENT
 
 Pada client, hanya menggunakan socket dan menerima inputan user, serta mengirimnya ke server yang telah terhubung.
-
 # SOAL 3
 Menggunakan 4 thread, yaitu sebagai berikut:
 - Thread 1
@@ -32,7 +31,12 @@ Thread 3 digunakan untuk menjalankan fungsi `All Status`, dimana thread akan men
 
 - Thread 4
 
-Thread 4 digunakan untuk menerima inputan dari user. Thread ini akan mengaktifkan flag pada masing-masing fitur ketika fitur tersebut dijalankan. Ketika WakeUp_Status bernilai lebih dari sama dengan 100 atau Spirit_Status bernilai kurang dari sama dengan 0, maka thread 4 akan mencetak "Agmal Terbangun, mereka bangun pagi dan berolahraga" ketika WakeUp_Status bernilai lebih dari sama dengan 100 dan akan mencetak "Iraj ikut tidur, dan bangun kesiangan bersama Agmal" ketika Spirit_Status bernilai kurang dari sama dengan 0. Setelah itu thread 4 akan di kill menggunakan perintah `pthread_kill(nama_thread, SIGKILL);`.
+Thread 4 ini akan mengaktifkan flag (flag diaktifkan bedasarkan input pada thread 5) pada masing-masing fitur ketika fitur tersebut dijalankan. Ketika WakeUp_Status bernilai lebih dari sama dengan 100 atau Spirit_Status bernilai kurang dari sama dengan 0, maka thread 4 akan mencetak "Agmal Terbangun, mereka bangun pagi dan berolahraga" ketika WakeUp_Status bernilai lebih dari sama dengan 100 dan akan mencetak "Iraj ikut tidur, dan bangun kesiangan bersama Agmal" ketika Spirit_Status bernilai kurang dari sama dengan 0. Setelah itu thread 4 akan di kill menggunakan perintah `pthread_kill(nama_thread, SIGKILL);`.
 
+- Thread 5
+
+Thread 5 digunakan untuk menerima inputan dari user.
 # SOAL 4
+
+Jadi untuk menjalankan apa yang diminta soal nomor 4, saya menggunakan 7 thread. 2 thread pertama memiliki fungsi yang sama, yaitu menyimpan 10 baris dari ps aux ke dalam folder bernama SimpanProses.txt. Thread pertama akan menyimpan dengan nama file SimpanProses1.txt, sedangkan thread kedua akan menyimpan dengan nama file SimpanProses2.txt. Lalu thread ketiga dan keempat akan digunakan untuk zip dari SimpanProses1.txt dan SimpanProses2.txt. Thread ketiga akan zip file SimpanProses1.txt ke dalam file zip bernama KompresProses1.zip sedangkan thread keempat akan zip file SimpanProses2.txt ke dalam file zip bernama KompresProses2.zip. Proses zip dari SimpanProses1.txt dan SimpanProses2.txt saya tambahkan -rmj sehingga setelah di zip, file SimpanProses1.txt dan SimpanProses2.txt akan di delete. Thread ketiga dan keempat akan berjalan setelah thread pertama dan kedua telah selesai dengan menggunakan Mutual Exclusion. Thread kelima saya buat untuk print "Menunggu 15 detik untuk mengekstrak kembali". Thread kelima saya buat setelah thread 1,2,3, dan thread 4 telah selesai. Lalu thread 6 dan 7 saya buat untuk unzip dari KompresProses1.zip dan KompresProses2.zip.
 # SOAL 5
