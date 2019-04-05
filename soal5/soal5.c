@@ -360,6 +360,7 @@ void* shopscene(void *arg)
 
 //		flag8=0;
 		printf("Shop Mode\n");
+		printf("Shop Food Stock : %d\n", *shopfoodstock);
 		printf("Your Food Stock : %d\n", myfoodstock);
 		printf("Choices\n");
 		printf("1. Buy\n");
