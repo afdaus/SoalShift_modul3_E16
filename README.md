@@ -42,14 +42,14 @@ Jadi untuk menjalankan apa yang diminta soal nomor 4, saya menggunakan 7 thread.
 # SOAL 5
 
 Untuk nomor 5, kami menggunakan 13 thread. 
-1 thread digunakan untuk membaca inputan string yang merupakan nama monster yang akan digunakan.
-1 thread digunakan untuk membaca inputan berupa key press. thread ini akan selalu nyala
-1 thread digunakan untuk membuat standby mode. Di dalam standby mode ini, akan ada suatu variabel yang akan selalu nyala ketika di dalam mode stand by mode. Variabel ini akan digunakan 3 thread untuk membuat Hunger_Status berkurang 5 tiap 10 detik, Hygiene_Status berkurang 10 tiap 30 detik, dan Health_Status bertambah 5 tiap 10 detik.
+- 1 thread digunakan untuk membaca inputan string yang merupakan nama monster yang akan digunakan.
+- 1 thread digunakan untuk membaca inputan berupa key press. thread ini akan selalu nyala
+- 1 thread digunakan untuk membuat standby mode. Di dalam standby mode ini, akan ada suatu variabel yang akan selalu nyala ketika di dalam mode stand by mode. Variabel ini akan digunakan 3 thread untuk membuat Hunger_Status berkurang 5 tiap 10 detik, Hygiene_Status berkurang 10 tiap 30 detik, dan Health_Status bertambah 5 tiap 10 detik.
 Lalu di dalam thread standby mode ini akan selalu dicek apakah Hygiene_Status dan Hunger_Status nya lebih besar dari 0, jika Hygiene_Status atau Hunger_Statusnya lebih kecil sama dengan 0 maka Monster akan mati.
-1 thread digunakan untuk battlescene.
-1 thread digunakan untuk makan myfoodstock dan setelah dimakan Health_Status akan bertambah 15 dan myfoodstock akan berkurang 1. 
-1 thread digunakan untuk membuat shop. Dalam shop ini akan menampilkan Stock yang ada di shop dengan menggunakan shared memory. Sedangkan shop aslinya berada di program lain.
-1 thread digunakan ketika sedang dalam battlescene, jika menggunakan attack, maka health musuh akan berkurang 20.
-1 thread digunakan ketika musuh sudah diserang, musuh akan menyerang balik dengan damage yang sama yaitu 20.
-1 thread digunakan untuk bath dan menambah Hygiene_Status sebanyak 30.
-1 thread digunakan untuk countdown 20 detik yang berada pada stand by mode ketika user memilih bath.
+- 1 thread digunakan untuk battlescene.
+- 1 thread digunakan untuk makan myfoodstock dan setelah dimakan Health_Status akan bertambah 15 dan myfoodstock akan berkurang 1. 
+- 1 thread digunakan untuk membuat shop. Dalam shop ini akan menampilkan Stock yang ada di shop dengan menggunakan shared memory. Sedangkan shop aslinya berada di program lain.
+- 1 thread digunakan ketika sedang dalam battlescene, jika menggunakan attack, maka health musuh akan berkurang 20.
+- 1 thread digunakan ketika musuh sudah diserang, musuh akan menyerang balik dengan damage yang sama yaitu 20.
+- 1 thread digunakan untuk bath dan menambah Hygiene_Status sebanyak 30.
+- 1 thread digunakan untuk countdown 20 detik yang berada pada stand by mode ketika user memilih bath.
