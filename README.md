@@ -1,5 +1,8 @@
 # SoalShift_modul3_E16
 # SOAL 1
+1. Langkah pertama untuk menyelesaikan soal ini yaitu mengurutkan terlebih dahulu input dari user, disini saya menggunakan Bubble Sort.
+2. Selanjutnya membuat fungsi untuk menghitung faktorial nya, dengan cara rekursif (nilai yang sekarang dikalikan nilai sebelumnya).
+3. Setelah itu membuat thread dengan syntax seperti berikut `pthread_create(&tid[arr[i]], NULL, &tulis,(void *)&nilai);` tid merupakan thread id, tulis merupakan nama fungsi untuk menghitung faktorial nya, sedangkan nilai merupakan global variabel yang berfungsi sebagai batas yang akan digunakan pada fungsi faktorial.
 # SOAL 2
 - SERVER PENJUAL
 
