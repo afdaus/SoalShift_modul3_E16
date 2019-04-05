@@ -52,10 +52,10 @@ int main(){
 	{
 		nilai = arr[i];
 		pthread_create(&tid[arr[i]], NULL, &tulis,(void *)&nilai);
-	    pthread_join(tid[arr[i]],NULL);
-	    //if (pthread_equal(tid[1], tid[2])) printf("Thread 2 is same as thread 1.\n");
+	    	pthread_join(tid[arr[i]],NULL);
+	    	//if (pthread_equal(tid[1], tid[2])) printf("Thread 2 is same as thread 1.\n");
 		//else printf("Thread 2 is NOT same as thread 1.\n");
-	    i++;
+	    	i++;
 	}
 	    
     return 0;
